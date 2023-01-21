@@ -26,7 +26,7 @@ pub struct PasswordInfo {
 }
 
 /// The status of authentication after the final client message has been received by the server.
-#[derive(Clone, Copy, PartialEq, Debug)]
+#[derive(Clone, Copy, PartialEq, Eq, Debug)]
 pub enum AuthenticationStatus {
     /// The client has correctly authenticated, and has been authorized.
     Authenticated,

@@ -1,7 +1,7 @@
 use std::{error, fmt};
 
 /// The SCRAM mechanism error cases.
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum Error {
     /// A message wasn't formatted as required. `Kind` contains further information.
     ///
@@ -19,7 +19,7 @@ pub enum Error {
 }
 
 /// The kinds of protocol errors.
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum Kind {
     /// The server responded with a nonce that doesn't start with our nonce.
     InvalidNonce,
@@ -30,7 +30,7 @@ pub enum Kind {
 }
 
 /// The fields used in the exchanged messages.
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Eq)]
 pub enum Field {
     /// Nonce
     Nonce,
