@@ -223,7 +223,7 @@ pub struct ClientFinal<'a, P: 'a + AuthenticationProvider> {
     gs2header: Cow<'static, str>,
     client_first_bare: Cow<'static, str>,
     server_first: Cow<'static, str>,
-    authcid: &'a str,
+    pub authcid: &'a str,
     authzid: Option<&'a str>,
     provider: &'a P,
 }
